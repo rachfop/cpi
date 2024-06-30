@@ -10,7 +10,23 @@ This mechanism extends signer privileges from the caller program to the callee p
 
 This sequence shows how CPIs can enable complex interactions between multiple Solana programs, enhancing modularity and composability.
 
-![CPI Diagram showing the sequence of a transaction](cpi.svg)
+```mermaid
+sequenceDiagram
+    participant User
+    participant CallerProgram as Caller Program
+    participant CalleeProgram as Callee Program
+    participant OtherProgram as Another Program
+
+    User->>CallerProgram: Initiate Transaction
+    CallerProgram->>CallerProgram: Execute Instruction
+    CallerProgram->>CalleeProgram: CPI - Invoke Instruction
+    CalleeProgram->>CalleeProgram: Execute Instruction
+    CalleeProgram->>OtherProgram: Optional CPI - Invoke Instruction (Depth 2)
+    OtherProgram->>OtherProgram: Execute Instruction
+    OtherProgram->>CalleeProgram: Return Result
+    CalleeProgram->>CallerProgram: Return Result
+    CallerProgram->>User: Transaction Completed
+```
 
 When making a CPI, a program can sign on behalf of a Program Derived Address (PDA).
 Additionally, the callee program can further invoke other programs up to a maximum depth of 4 CPIs.

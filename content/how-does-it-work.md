@@ -8,6 +8,25 @@ Each CPI instruction must specify the following information:
 - **Account List**: Every account that the instruction reads from or writes to, including accounts of other programs.
 - **Instruction Data**: Specifies which instruction on the program to invoke.
 
+```mermaid
+flowchart TD
+    CPI[Each CPI Instruction]
+    PA[Program Address or ID]
+    AL[Account List]
+    ID[Instruction Data]
+    INV[invoke]
+    INV_SIGNED[invoke_signed]
+
+    CPI --> PA
+    CPI --> AL
+    CPI --> ID
+    CPI -.-> INV
+    CPI -.-> INV_SIGNED
+
+    INV -->|Passes through the original transaction signature| CPI
+    INV_SIGNED -->|Allows your program to sign the transaction| CPI
+```
+
 CPIs are made using the `invoke` and `invoke_signed` functions from the `solana_program` crate:
 
 - `invoke`: Passes through the original transaction signature.
