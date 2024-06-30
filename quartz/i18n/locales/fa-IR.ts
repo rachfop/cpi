@@ -1,4 +1,4 @@
-import { Translation } from "./definition"
+import { Translation } from "./definition";
 
 export default {
   propertyDefaults: {
@@ -69,16 +69,14 @@ export default {
     },
     folderContent: {
       folder: "پوشه",
-      itemsUnderFolder: ({ count }) =>
-        count === 1 ? ".یک مطلب در این پوشه است" : `${count} مطلب در این پوشه است.`,
+      itemsUnderFolder: ({ count }) => count === 1 ? ".یک مطلب در این پوشه است" : `${count} مطلب در این پوشه است.`,
     },
     tagContent: {
       tag: "برچسب",
       tagIndex: "فهرست برچسب‌ها",
-      itemsUnderTag: ({ count }) =>
-        count === 1 ? "یک مطلب با این برچسب" : `${count} مطلب با این برچسب.`,
+      itemsUnderTag: ({ count }) => count === 1 ? "یک مطلب با این برچسب" : `${count} مطلب با این برچسب.`,
       showingFirst: ({ count }) => `در حال نمایش ${count} برچسب.`,
       totalTags: ({ count }) => `${count} برچسب یافت شد.`,
     },
   },
-} as const satisfies Translation
+} as const satisfies Translation;

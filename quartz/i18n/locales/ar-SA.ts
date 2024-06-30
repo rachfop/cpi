@@ -1,4 +1,4 @@
-import { Translation } from "./definition"
+import { Translation } from "./definition";
 
 export default {
   propertyDefaults: {
@@ -58,8 +58,8 @@ export default {
         minutes == 1
           ? `دقيقة أو أقل للقراءة`
           : minutes == 2
-            ? `دقيقتان للقراءة`
-            : `${minutes} دقائق للقراءة`,
+          ? `دقيقتان للقراءة`
+          : `${minutes} دقائق للقراءة`,
     },
   },
   pages: {
@@ -86,4 +86,4 @@ export default {
       totalTags: ({ count }) => `يوجد ${count} أوسمة.`,
     },
   },
-} as const satisfies Translation
+} as const satisfies Translation;

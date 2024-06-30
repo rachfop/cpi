@@ -1,4 +1,4 @@
-import { Translation } from "./definition"
+import { Translation } from "./definition";
 
 export default {
   propertyDefaults: {
@@ -69,16 +69,14 @@ export default {
     },
     folderContent: {
       folder: "Thư Mục",
-      itemsUnderFolder: ({ count }) =>
-        count === 1 ? "1 mục trong thư mục này." : `${count} mục trong thư mục này.`,
+      itemsUnderFolder: ({ count }) => count === 1 ? "1 mục trong thư mục này." : `${count} mục trong thư mục này.`,
     },
     tagContent: {
       tag: "Thẻ",
       tagIndex: "Thẻ Mục Lục",
-      itemsUnderTag: ({ count }) =>
-        count === 1 ? "1 mục gắn thẻ này." : `${count} mục gắn thẻ này.`,
+      itemsUnderTag: ({ count }) => count === 1 ? "1 mục gắn thẻ này." : `${count} mục gắn thẻ này.`,
       showingFirst: ({ count }) => `Hiển thị trước ${count} thẻ.`,
       totalTags: ({ count }) => `Tìm thấy ${count} thẻ tổng cộng.`,
     },
   },
-} as const satisfies Translation
+} as const satisfies Translation;

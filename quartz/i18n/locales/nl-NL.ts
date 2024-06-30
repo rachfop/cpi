@@ -1,4 +1,4 @@
-import { Translation } from "./definition"
+import { Translation } from "./definition";
 
 export default {
   propertyDefaults: {
@@ -54,8 +54,7 @@ export default {
       title: "Inhoudsopgave",
     },
     contentMeta: {
-      readingTime: ({ minutes }) =>
-        minutes === 1 ? "1 minuut leestijd" : `${minutes} minuten leestijd`,
+      readingTime: ({ minutes }) => minutes === 1 ? "1 minuut leestijd" : `${minutes} minuten leestijd`,
     },
   },
   pages: {
@@ -70,17 +69,14 @@ export default {
     },
     folderContent: {
       folder: "Map",
-      itemsUnderFolder: ({ count }) =>
-        count === 1 ? "1 item in deze map." : `${count} items in deze map.`,
+      itemsUnderFolder: ({ count }) => count === 1 ? "1 item in deze map." : `${count} items in deze map.`,
     },
     tagContent: {
       tag: "Label",
       tagIndex: "Label-index",
-      itemsUnderTag: ({ count }) =>
-        count === 1 ? "1 item met dit label." : `${count} items met dit label.`,
-      showingFirst: ({ count }) =>
-        count === 1 ? "Eerste label tonen." : `Eerste ${count} labels tonen.`,
+      itemsUnderTag: ({ count }) => count === 1 ? "1 item met dit label." : `${count} items met dit label.`,
+      showingFirst: ({ count }) => count === 1 ? "Eerste label tonen." : `Eerste ${count} labels tonen.`,
       totalTags: ({ count }) => `${count} labels gevonden.`,
     },
   },
-} as const satisfies Translation
+} as const satisfies Translation;

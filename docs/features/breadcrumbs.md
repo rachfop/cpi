@@ -21,7 +21,7 @@ Component.Breadcrumbs({
   resolveFrontmatterTitle: true, // whether to resolve folder names through frontmatter titles
   hideOnRoot: true, // whether to hide breadcrumbs on root `index.md` page
   showCurrentPage: true, // whether to display the current page in the breadcrumbs
-})
+});
 ```
 
 When passing in your own options, you can omit any or all of these fields if you'd like to keep the default value for that field.

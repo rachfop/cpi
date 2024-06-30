@@ -1,4 +1,4 @@
-import { Translation } from "./definition"
+import { Translation } from "./definition";
 
 export default {
   propertyDefaults: {
@@ -69,16 +69,14 @@ export default {
     },
     folderContent: {
       folder: "Папка",
-      itemsUnderFolder: ({ count }) =>
-        count === 1 ? "У цій папці 1 елемент." : `Елементів у цій папці: ${count}.`,
+      itemsUnderFolder: ({ count }) => count === 1 ? "У цій папці 1 елемент." : `Елементів у цій папці: ${count}.`,
     },
     tagContent: {
       tag: "Тег",
       tagIndex: "Індекс тегу",
-      itemsUnderTag: ({ count }) =>
-        count === 1 ? "1 елемент з цим тегом." : `Елементів з цим тегом: ${count}.`,
+      itemsUnderTag: ({ count }) => count === 1 ? "1 елемент з цим тегом." : `Елементів з цим тегом: ${count}.`,
       showingFirst: ({ count }) => `Показ перших ${count} тегів.`,
       totalTags: ({ count }) => `Всього знайдено тегів: ${count}.`,
     },
   },
-} as const satisfies Translation
+} as const satisfies Translation;

@@ -22,8 +22,8 @@ $$
 
 $$
 f(x) = \int_{-\infty}^\infty
-    f\hat(\xi),e^{2 \pi i \xi x}
-    \,d\xi
+f\hat(\xi),e^{2 \pi i \xi x}
+\,d\xi
 $$
 
 $$
@@ -74,7 +74,7 @@ Add the following import to the top of `quartz/plugins/transformers/latex.ts` (b
 imports):
 
 ```ts title="quartz/plugins/transformers/latex.ts"
-import "katex/contrib/mhchem"
+import "katex/contrib/mhchem";
 ```
 
 ## Customization

@@ -52,9 +52,9 @@ By default, custom callouts are handled by applying the `note` style. To make fa
 
 > [!question]+ Can callouts be _nested_?
 >
-> > [!todo]- Yes!, they can. And collapsed!
-> >
-> > > [!example] You can even use multiple layers of nesting.
+> [!todo]- Yes!, they can. And collapsed!
+>
+> [!example] You can even use multiple layers of nesting.
 
 > [!note]
 > Aliases: "note"

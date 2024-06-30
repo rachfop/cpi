@@ -80,15 +80,15 @@ Component.Explorer({
       return a.displayName.localeCompare(b.displayName, undefined, {
         numeric: true,
         sensitivity: "base",
-      })
+      });
     }
     if (a.file && !b.file) {
-      return 1
+      return 1;
     } else {
-      return -1
+      return -1;
     }
   },
-})
+});
 ```
 
 ---
@@ -128,15 +128,15 @@ Using this example, the explorer will alphabetically sort everything, but put al
 Component.Explorer({
   sortFn: (a, b) => {
     if ((!a.file && !b.file) || (a.file && b.file)) {
-      return a.displayName.localeCompare(b.displayName)
+      return a.displayName.localeCompare(b.displayName);
     }
     if (a.file && !b.file) {
-      return -1
+      return -1;
     } else {
-      return 1
+      return 1;
     }
   },
-})
+});
 ```
 
 ### Change display names (`map`)
@@ -146,9 +146,9 @@ Using this example, the display names of all `FileNodes` (folders + files) will 
 ```ts title="quartz.layout.ts"
 Component.Explorer({
   mapFn: (node) => {
-    node.displayName = node.displayName.toUpperCase()
+    node.displayName = node.displayName.toUpperCase();
   },
-})
+});
 ```
 
 ### Remove list of elements (`filter`)
@@ -159,10 +159,10 @@ Using this example, you can remove elements from your explorer by providing an a
 Component.Explorer({
   filterFn: (node) => {
     // set containing names of everything you want to filter out
-    const omit = new Set(["authoring content", "tags", "hosting"])
-    return !omit.has(node.name.toLowerCase())
+    const omit = new Set(["authoring content", "tags", "hosting"]);
+    return !omit.has(node.name.toLowerCase());
   },
-})
+});
 ```
 
 You can customize this by changing the entries of the `omit` set. Simply add all folder or file names you want to remove.
@@ -175,9 +175,9 @@ You can access the frontmatter of a file by `node.file?.frontmatter?`. This allo
 Component.Explorer({
   filterFn: (node) => {
     // exclude files with the tag "explorerexclude"
-    return node.file?.frontmatter?.tags?.includes("explorerexclude") !== true
+    return node.file?.frontmatter?.tags?.includes("explorerexclude") !== true;
   },
-})
+});
 ```
 
 ### Show every element in explorer
@@ -187,7 +187,7 @@ To override the default filter function that removes the `tags` folder from the 
 ```ts title="quartz.layout.ts"
 Component.Explorer({
   filterFn: undefined, // apply no filter function, every file and folder will visible
-})
+});
 ```
 
 ## Advanced examples
@@ -197,27 +197,27 @@ Component.Explorer({
 > You can fix this by defining your functions in another file.
 >
 > ```ts title="functions.ts"
-> import { Options } from "./quartz/components/ExplorerNode"
+> import { Options } from "./quartz/components/ExplorerNode";
 > export const mapFn: Options["mapFn"] = (node) => {
 >   // implement your function here
-> }
+> };
 > export const filterFn: Options["filterFn"] = (node) => {
 >   // implement your function here
-> }
+> };
 > export const sortFn: Options["sortFn"] = (a, b) => {
 >   // implement your function here
-> }
+> };
 > ```
 >
 > You can then import them like this:
 >
 > ```ts title="quartz.layout.ts"
-> import { mapFn, filterFn, sortFn } from "./functions.ts"
+> import { filterFn, mapFn, sortFn } from "./functions.ts";
 > Component.Explorer({
 >   mapFn: mapFn,
 >   filterFn: filterFn,
 >   sortFn: sortFn,
-> })
+> });
 > ```
 
 ### Add emoji prefix
@@ -231,13 +231,13 @@ Component.Explorer({
     if (node.depth > 0) {
       // set emoji for file/folder
       if (node.file) {
-        node.displayName = "📄 " + node.displayName
+        node.displayName = "📄 " + node.displayName;
       } else {
-        node.displayName = "📁 " + node.displayName
+        node.displayName = "📁 " + node.displayName;
       }
     }
   },
-})
+});
 ```
 
 ### Putting it all together
@@ -250,7 +250,7 @@ Component.Explorer({
   mapFn: sampleMapFn,
   sortFn: sampleSortFn,
   order: ["filter", "sort", "map"],
-})
+});
 ```
 
 Notice how we customized the `order` array here. This is done because the default order applies the `sort` function last. While this normally works well, it would cause unintended behavior here, since we changed the first characters of all display names. In our example, `sort` would be applied based off the emoji prefix instead of the first _real_ character.
@@ -272,26 +272,26 @@ Component.Explorer({
       "research-paper-file": 201,
       "dinosaur-fossils-file": 300,
       "other-folder": 400,
-    }
+    };
 
-    let orderA = 0
-    let orderB = 0
+    let orderA = 0;
+    let orderB = 0;
 
     if (a.file && a.file.slug) {
-      orderA = nameOrderMap[a.file.slug] || 0
+      orderA = nameOrderMap[a.file.slug] || 0;
     } else if (a.name) {
-      orderA = nameOrderMap[a.name] || 0
+      orderA = nameOrderMap[a.name] || 0;
     }
 
     if (b.file && b.file.slug) {
-      orderB = nameOrderMap[b.file.slug] || 0
+      orderB = nameOrderMap[b.file.slug] || 0;
     } else if (b.name) {
-      orderB = nameOrderMap[b.name] || 0
+      orderB = nameOrderMap[b.name] || 0;
     }
 
-    return orderA - orderB
+    return orderA - orderB;
   },
-})
+});
 ```
 
 For reference, this is how the quartz explorer window would look like with that example:

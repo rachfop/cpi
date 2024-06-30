@@ -1,4 +1,4 @@
-import { Translation } from "./definition"
+import { Translation } from "./definition";
 
 export default {
   propertyDefaults: {
@@ -75,10 +75,9 @@ export default {
     tagContent: {
       tag: "Znacznik",
       tagIndex: "Spis znaczników",
-      itemsUnderTag: ({ count }) =>
-        count === 1 ? "Oznaczony 1 element." : `Elementów z tym znacznikiem: ${count}.`,
+      itemsUnderTag: ({ count }) => count === 1 ? "Oznaczony 1 element." : `Elementów z tym znacznikiem: ${count}.`,
       showingFirst: ({ count }) => `Pokazuje ${count} pierwszych znaczników.`,
       totalTags: ({ count }) => `Znalezionych wszystkich znaczników: ${count}.`,
     },
   },
-} as const satisfies Translation
+} as const satisfies Translation;

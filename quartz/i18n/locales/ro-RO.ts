@@ -1,4 +1,4 @@
-import { Translation } from "./definition"
+import { Translation } from "./definition";
 
 export default {
   propertyDefaults: {
@@ -54,8 +54,7 @@ export default {
       title: "Cuprins",
     },
     contentMeta: {
-      readingTime: ({ minutes }) =>
-        minutes == 1 ? `lectură de 1 minut` : `lectură de ${minutes} minute`,
+      readingTime: ({ minutes }) => minutes == 1 ? `lectură de 1 minut` : `lectură de ${minutes} minute`,
     },
   },
   pages: {
@@ -70,8 +69,7 @@ export default {
     },
     folderContent: {
       folder: "Dosar",
-      itemsUnderFolder: ({ count }) =>
-        count === 1 ? "1 articol în acest dosar." : `${count} elemente în acest dosar.`,
+      itemsUnderFolder: ({ count }) => count === 1 ? "1 articol în acest dosar." : `${count} elemente în acest dosar.`,
     },
     tagContent: {
       tag: "Etichetă",
@@ -82,4 +80,4 @@ export default {
       totalTags: ({ count }) => `Au fost găsite ${count} etichete în total.`,
     },
   },
-} as const satisfies Translation
+} as const satisfies Translation;
