@@ -1,8 +1,10 @@
 ---
-title: How does CPI work?
+title: How does Cross-Program Invocation work?
+sidebar: 🔍 How does CPI work?
+toc: 2
 ---
 
-Each CPI instruction must specify the following information:
+Each Cross-Program Invocation (CPI) instruction must specify the following information:
 
 - **Program Address or ID**: The identifier of the program being called.
 - **Account List**: Every account that the instruction reads from or writes to, including accounts of other programs.
@@ -35,7 +37,7 @@ CPIs are made using the `invoke` and `invoke_signed` functions from the `solana_
 ## Related Links
 
 - For an overview of CPIs, see the [Overview of CPI](overview.md).
-- For a detailed guide on implementing CPIs using Anchor, see [Cross-Program Invocations in Solana Using Anchor](index.md).
+- For a detailed guide on implementing CPIs using Anchor, see [Cross-Program Invocations in Solana Using Anchor](tutorial.md).
 - For key features of CPIs, see [Key Features](key-features.md).
 - For reasons to use CPIs in your projects, see [Why Use Cross-Program Invocation](why.md).
 - For practical examples and use cases of CPIs, see [Examples of CPI](examples-of-cpi.md).

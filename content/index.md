@@ -1,6 +1,6 @@
 ---
-title: Overview
-
+title: Overview of Cross-Program Invocations
+toc: 1
 ---
 
 A Cross-Program Invocation (CPI) in Solana allows one program to invoke the instructions of another program, effectively enabling interaction between programs.
@@ -36,7 +36,7 @@ To get started buiding a Cross-Program Invocation, see the [[tutorial.md | Tutor
 
 ## Related Links
 
-- For a detailed guide on implementing CPIs using Anchor, see [Cross-Program Invocations in Solana Using Anchor](index.md).
+- For a detailed guide on implementing CPIs using Anchor, see [Cross-Program Invocations in Solana Using Anchor](tutorial.md).
 - For information on how CPIs work, see [How Does CPI Work?](how-does-it-work.md).
 - For key features of CPIs, see [Key Features](key-features.md).
 - For reasons to use CPIs in your projects, see [Why Use Cross-Program Invocation](why.md).

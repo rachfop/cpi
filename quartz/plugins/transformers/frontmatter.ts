@@ -71,6 +71,20 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options> | undefined> 
             const cssclasses = coerceToArray(coalesceAliases(data, ["cssclasses", "cssclass"]));
             if (cssclasses) data.cssclasses = cssclasses;
 
+            // Parse toc property
+            if (data.toc != null) {
+              data.toc = parseInt(data.toc, 10);
+            } else {
+              data.toc = Infinity; // default value if toc is not specified
+            }
+
+            // Parse sidebar property
+            if (data.sidebar != null && data.sidebar.toString() !== "") {
+              data.sidebar = data.sidebar.toString();
+            } else {
+              data.sidebar = data.title;
+            }
+
             // fill in frontmatter
             file.data.frontmatter = data as QuartzPluginData["frontmatter"];
           };
@@ -86,6 +100,7 @@ declare module "vfile" {
       & { [key: string]: unknown }
       & {
         title: string;
+        sidebar: string; // Add sidebar property
       }
       & Partial<{
         tags: string[];
@@ -96,6 +111,7 @@ declare module "vfile" {
         lang: string;
         enableToc: string;
         cssclasses: string[];
+        toc: number;
       }>;
   }
 }

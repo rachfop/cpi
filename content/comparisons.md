@@ -1,5 +1,7 @@
 ---
 title: Comparisons
+sidebar: ⚖️ Comparisons
+toc: 4
 ---
 
 Cross-Program Invocations (CPI) in Solana offer a unique and powerful way to enable interaction between programs on the blockchain.
@@ -27,7 +29,7 @@ Using Cross-Program Invocations allows your Solana programs to interact with eac
 ## Related Links
 
 - For an overview of CPIs, see the [Overview of CPI](overview.md).
-- For a detailed guide on implementing CPIs using Anchor, see [Cross-Program Invocations in Solana Using Anchor](index.md).
+- For a detailed guide on implementing CPIs using Anchor, see [Cross-Program Invocations in Solana Using Anchor](tutorial.md).
 - For information on how CPIs work, see [How Does CPI Work?](how-does-it-work.md).
 - For key features of CPIs, see [Key Features](key-features.md).
 - For reasons to use CPIs in your projects, see [Why Use Cross-Program Invocation](why.md).

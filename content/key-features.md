@@ -1,5 +1,7 @@
 ---
 title: Key features
+sidebar: 🌟 Key Features
+toc: 6
 ---
 
 Cross-Program Invocations (CPI) in Solana provide a robust framework for creating complex, modular, and secure decentralized applications.
@@ -48,7 +50,7 @@ A supply chain management system may consist of several independent programs, su
 
 - For an overview of CPIs, see the [Overview of CPI](overview.md).
 - For comparisons with other programming paradigms, see [Comparisons](comparisons.md).
-- For a detailed guide on implementing CPIs using Anchor, see [Cross-Program Invocations in Solana Using Anchor](index.md).
+- For a detailed guide on implementing CPIs using Anchor, see [Cross-Program Invocations in Solana Using Anchor](tutorial.md).
 - For information on how CPIs work, see [How Does CPI Work?](how-does-it-work.md).
 - For reasons to use CPIs in your projects, see [Why Use Cross-Program Invocation](why.md).
 - For practical examples and use cases of CPIs, see [Examples of CPI](examples-of-cpi.md).

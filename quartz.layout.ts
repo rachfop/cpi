@@ -1,6 +1,18 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg";
 import * as Component from "./quartz/components";
 
+function customSortFn(a, b) {
+  const tocA = a.file?.frontmatter?.toc ?? Infinity;
+  const tocB = b.file?.frontmatter?.toc ?? Infinity;
+  return tocA - tocB;
+}
+
+function customMapFn(node) {
+  if (node.file) {
+    node.displayName = node.file.frontmatter?.sidebar ?? node.displayName;
+  }
+}
+
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
@@ -8,7 +20,7 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/rachfop",
-      "Medium": "https://medium.com/@patford12",
+      Medium: "https://medium.com/@patford12",
     },
   }),
 };
@@ -26,7 +38,13 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(
+      Component.Explorer({
+        sortFn: customSortFn,
+        filterFn: (node) => node.name !== "tags", // filters out 'tags' folder
+        mapFn: customMapFn,
+      })
+    ),
   ],
   right: [
     Component.Graph(),
@@ -35,7 +53,7 @@ export const defaultContentPageLayout: PageLayout = {
   ],
 };
 
-// components for pages that display lists of pages  (e.g. tags or folders)
+// components for pages that display lists of pages (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
@@ -43,7 +61,13 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(
+      Component.Explorer({
+        sortFn: customSortFn,
+        filterFn: (node) => node.name !== "tags", // filters out 'tags' folder
+        mapFn: customMapFn,
+      })
+    ),
   ],
   right: [],
 };

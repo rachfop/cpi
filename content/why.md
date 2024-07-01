@@ -1,5 +1,7 @@
 ---
 title: Why you should use CPIs
+sidebar: 🤔 Why Use CPIs?
+toc: 3
 ---
 
 Using Cross-Program Invocations allows your Solana programs to interact with each other efficiently.
@@ -19,8 +21,8 @@ For example, a program that manages user authentication can be reused across mul
 
 ## Enable Interoperability
 
-Interoperability is a significant advantage of using CPIs. Programs on the Solana blockchain can interact seamlessly with each other, enabling a high level of interoperability. T
-his interaction allows developers to create more integrated and cohesive ecosystems where different applications and services can work together to provide a more comprehensive user experience.
+Interoperability is a significant advantage of using CPIs. Programs on the Solana blockchain can interact seamlessly with each other, enabling a high level of interoperability.
+This interaction allows developers to create more integrated and cohesive ecosystems where different applications and services can work together to provide a more comprehensive user experience.
 For example, a decentralized exchange (DEX) can use a CPI to interact with a lending protocol, allowing users to trade assets and simultaneously earn interest on their holdings.
 
 ## Optimize Development Time and Resources
@@ -32,7 +34,7 @@ This approach not only accelerates the development process but also ensures that
 
 - For an overview of CPIs, see the [Overview of CPI](overview.md).
 - For comparisons with other programming paradigms, see [Comparisons](comparisons.md).
-- For a detailed guide on implementing CPIs using Anchor, see [Cross-Program Invocations in Solana Using Anchor](index.md).
+- For a detailed guide on implementing CPIs using Anchor, see [Cross-Program Invocations in Solana Using Anchor](tutorial.md).
 - For information on how CPIs work, see [How Does CPI Work?](how-does-it-work.md).
 - For key features of CPIs, see [Key Features](key-features.md).
 - For practical examples and use cases of CPIs, see [Examples of CPI](examples-of-cpi.md).
