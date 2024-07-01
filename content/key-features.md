@@ -4,8 +4,9 @@ sidebar: 🌟 Key Features
 toc: 6
 ---
 
-Cross-Program Invocations (CPI) in Solana provide a robust framework for creating complex, modular, and secure decentralized applications.
-Here, we dive deeper into the key features that make CPIs an essential tool for developers.
+Cross-Program Invocations (CPI) in Solana help build strong and secure apps by connecting different programs together.
+The Solana system makes sure these connections happen safely and fairly.
+It checks that each program runs correctly and sends the right results back, making it possible to create trustworthy and decentralized apps on the Solana blockchain.
 
 ## Composability
 
@@ -13,12 +14,12 @@ Here, we dive deeper into the key features that make CPIs an essential tool for 
 
 **Explanation**:
 
-- **Building Blocks**: In a composable system, programs act as building blocks that can be combined and recombined in various ways to create new and innovative functionalities. This is akin to using Lego bricks to build complex structures from simple components.
-- **Synergy**: The true power of composability lies in the synergy between programs. By leveraging existing programs, developers can create new applications that are greater than the sum of their parts, without needing to reinvent the wheel.
+- **Building Blocks**: In a composable system, programs act as building blocks that can be combined and recombined in various ways to create new and innovative functionalities. This is simmilar to using Lego bricks to build complex structures from simple components.
 - **Efficiency**: Composability promotes efficiency by allowing developers to reuse existing code. This not only speeds up development but also ensures that the code has been tested and optimized, reducing the likelihood of errors.
 
 **Example**:
-Imagine a financial application that requires functionalities such as token transfers, lending, and staking. Instead of developing these features from scratch, the application can leverage existing programs that handle each functionality, composing them into a seamless user experience.
+Imagine a financial application that requires functionalities such as token transfers, lending, and staking.
+Instead of developing these features from scratch, the application can leverage existing programs that handle each functionality, composing them into a seamless user experience.
 
 ## Extended Privileges
 
@@ -26,7 +27,8 @@ Imagine a financial application that requires functionalities such as token tran
 
 **Explanation**:
 
-- **Delegated Authority**: When a program invokes another program via CPI, it can delegate its signer privileges to the callee program. This means that the callee program can perform actions on behalf of the caller program, maintaining a secure and trusted environment.
+- **Delegated Authority**: When a program invokes another program via CPI, it can delegate its signer privileges to the callee program.
+  This means that the callee program can perform actions on behalf of the caller program, maintaining a secure and trusted environment.
 - **Secure Interactions**: By extending privileges securely, CPIs ensure that only authorized interactions take place. This is crucial for maintaining the integrity and security of blockchain applications, where unauthorized actions can lead to significant security breaches.
 - **Program Derived Addresses (PDA)**: CPIs allow programs to sign transactions on behalf of PDAs, further enhancing the security and flexibility of interactions. PDAs are deterministic addresses that derive from a program and a seed, providing a secure way to manage accounts.
 
@@ -44,7 +46,8 @@ Consider a scenario where a decentralized exchange (DEX) program needs to perfor
 - **Code Reuse**: Modularity promotes code reuse by enabling programs to serve as reusable components. This reduces duplication of effort and ensures that best practices and optimizations are consistently applied across different projects.
 
 **Example**:
-A supply chain management system may consist of several independent programs, such as inventory tracking, shipment tracking, and payment processing. Each of these programs can be developed separately and interact with each other through CPIs to create a cohesive system.
+A supply chain management system may consist of several independent programs, such as inventory tracking, shipment tracking, and payment processing.
+Each of these programs can be developed separately and interact with each other through CPIs to create a cohesive system.
 
 ## Related Links
 

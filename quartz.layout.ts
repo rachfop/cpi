@@ -43,7 +43,7 @@ export const defaultContentPageLayout: PageLayout = {
         sortFn: customSortFn,
         filterFn: (node) => node.name !== "tags", // filters out 'tags' folder
         mapFn: customMapFn,
-      })
+      }),
     ),
   ],
   right: [
@@ -66,7 +66,7 @@ export const defaultListPageLayout: PageLayout = {
         sortFn: customSortFn,
         filterFn: (node) => node.name !== "tags", // filters out 'tags' folder
         mapFn: customMapFn,
-      })
+      }),
     ),
   ],
   right: [],
